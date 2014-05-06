@@ -18,7 +18,7 @@ attach(subset_raw_data)
 
 #plot1 <- hist(Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 
-png(filename="./plot1.png",width=480,height=480)
+png(filename="./plot1.png",width=480,height=480,bg = "transparent")
 #plot1 <- hist(Global_active_power,col="red")
 plot1 <- hist(Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 dev.off()

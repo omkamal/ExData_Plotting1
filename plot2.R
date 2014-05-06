@@ -19,7 +19,7 @@ attach(subset_raw_data)
 #plot1 <- hist(Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 
 
-png(filename="./plot2.png",width=480,height=480)
+png(filename="./plot2.png",width=480,height=480,bg = "transparent")
 plot2 <- plot(Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xaxt="n",xlab="")
 axis(1,at=c(which(subset_raw_data$Time=="00:00:00"),2880),labels=c("Thu","Fri","Sat"))
 dev.off()

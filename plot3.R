@@ -1,6 +1,5 @@
 # Exploratory Data Analysis - Project 1 
 rm(list=ls())
-
 setwd("C:/Coursera/Exploratory Data Analysis/Project1")
 raw_data <- read.table(file="./household_power_consumption.txt",sep=";",header=T,na.strings="?")
 
@@ -18,7 +17,7 @@ attach(subset_raw_data)
 
 #plot1 <- hist(Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 
-png(filename="./plot3.png",width=480,height=480)
+png(filename="./plot3.png",width=480,height=480,bg = "transparent")
 plot3 <- plot(Sub_metering_1,type="n",ylab="Energy sub metering",xaxt="n",xlab="")
 lines(Sub_metering_1,col="black")
 lines(Sub_metering_2,col="red")
@@ -27,3 +26,4 @@ axis(1,at=c(which(subset_raw_data$Time=="00:00:00"),2880),labels=c("Thu","Fri","
 legend("topright",lty=1,legend=colnames(subset_raw_data)[7:9],col=c("black","red","blue"))
 dev.off()
 
+detach(subset_raw_data)
